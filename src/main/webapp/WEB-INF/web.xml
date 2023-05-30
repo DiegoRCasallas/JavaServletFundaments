@@ -4,4 +4,14 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+ <!-- mapeamiento de la url de los servlets-->
+  <servlet>
+    <servlet-name>NuevaEmpresaServlet</servlet-name>
+    <display-name>NuevaEmpresaServlet</display-name>
+    <servlet-class>com.alura.gerenciador.servlet.NuevaEmpresaServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NuevaEmpresaServlet</servlet-name>
+    <url-pattern>/nuevaEmpresa</url-pattern>
+  </servlet-mapping>
 </web-app>
