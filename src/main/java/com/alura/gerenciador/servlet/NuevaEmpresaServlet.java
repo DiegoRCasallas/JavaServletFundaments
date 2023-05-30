@@ -12,8 +12,14 @@ public class NuevaEmpresaServlet extends HttpServlet {
     doPost obliga que el dato recibido sea usando post*/
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        
+        Empresa empresa = new Empresa();
         String nombreEmpresa = req.getParameter("nombre");
+        empresa.setNombre(nombreEmpresa);
+
+        DB baseDeDatos= new DB();
+        baseDeDatos.agregarEmpresa(empresa);
+
+
         PrintWriter out= resp.getWriter();
 
         out.println("<html>");
