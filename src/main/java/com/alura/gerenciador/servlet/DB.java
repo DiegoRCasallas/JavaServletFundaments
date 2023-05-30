@@ -5,11 +5,21 @@ import java.util.List;
 
 public class DB {
     private static List<Empresa> listaEmpresas= new ArrayList<>();
-    public void agregarEmpresa(Empresa empresa) {
-        this.listaEmpresas.add(empresa);
+
+    static {
+        Empresa empresa1 = new Empresa("CocaCola");
+        Empresa empresa2= new Empresa ("Pepsi");
+        listaEmpresas.add(empresa1);
+        listaEmpresas.add(empresa2);
     }
 
-    public static List<Empresa> getListaEmpresas() {
+    public void agregarEmpresa(Empresa empresa) {
+        listaEmpresas.add(empresa);
+    }
+
+    public static List<Empresa> getEmpresas() {
         return listaEmpresas;
     }
+
+
 }
